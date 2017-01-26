@@ -2,7 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import Hello from './components/Hello.vue'
+import Home from './components/Home.vue'
 
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
@@ -13,7 +13,7 @@ Vue.use(VueRouter)
 
 // router configuration
 const routes = [
-	{ path: '/', component: Hello }
+	{ path: '/home', component: Home }
 ]
 
 const router = new VueRouter({
@@ -22,6 +22,7 @@ const router = new VueRouter({
 
 // start the app
 const app = new Vue({
+	el: '#app',
 	router,
 	render: h => h(App)
 }).$mount('#app')
