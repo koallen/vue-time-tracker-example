@@ -3,9 +3,23 @@
 import Vue from 'vue'
 import App from './App'
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  template: '<App/>',
-  components: { App }
+import VueRouter from 'vue-router'
+import VueResource from 'vue-resource'
+
+// use vue-resource and vue-router
+Vue.use(VueResource)
+Vue.use(VueRouter)
+
+// router configuration
+const routes = [
+	{ path: '/', component: App }
+]
+
+const router = new VueRouter({
+	routes
 })
+
+// start the app
+const app = new Vue({
+	router
+}).$mount('#app')

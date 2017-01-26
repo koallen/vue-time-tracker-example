@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
+  <div id="welcome">
     <img src="./assets/logo.png">
-    <hello></hello>
+	<hello></hello>
   </div>
 </template>
 
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style>
-#app {
+#welcome {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
